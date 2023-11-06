@@ -15,8 +15,8 @@ WorldInfo {
   title "Human Skin Animation"
 }
 Viewpoint {
-  orientation -0.09795829761347259 0.013787353171528826 -0.9950950109518155 3.4198959651029277
-  position -2.1760598473152326 -3.085550613082623 2.0984450954808778
+  orientation 0.22977717711436643 -0.014917052964922857 -0.9731289382236018 3.2677753345640066
+  position -0.8536065719557149 -3.144318422397775 3.3003654734018655
 }
 TexturedBackground {
   texture "noon_cloudy_countryside"
@@ -45,7 +45,7 @@ DEF ROBERT Robot {
     "-d"
     "Robert"
     "-f"
-    "../../motions/walk.bvh"
+    "../../motions/gaze.bvh"
     "-l"
   ]
   supervisor TRUE
