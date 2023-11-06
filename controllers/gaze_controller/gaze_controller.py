@@ -5,7 +5,7 @@
 from controller import Robot, Motor
 import math
 
-YAW_ANGLE = 0
+YAW_ANGLE = 20
 PITCH_ANGLE = 30
 
 # create the Robot instance.

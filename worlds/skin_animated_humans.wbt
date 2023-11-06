@@ -15,8 +15,8 @@ WorldInfo {
   title "Human Skin Animation"
 }
 Viewpoint {
-  orientation 0.31987462652255844 -0.08674955671803708 -0.9434801204669221 3.6425849874442506
-  position -1.0017698794857153 -3.3247185548407145 2.896134079021302
+  orientation 0.2573840107879406 -0.28521391690535425 -0.9232586271431312 4.735211427192399
+  position -0.36614663071587317 -11.975083542738691 5.48518058547956
 }
 TexturedBackground {
   texture "noon_cloudy_countryside"
@@ -53,20 +53,29 @@ DEF ROBERT Robot {
               name "yaw_gaze"
             }
           ]
-          endPoint Solid {
-            translation -0.14 0 0
-            rotation 0 1 0 0
+          endPoint DEF gaze_tracker Solid {
+            translation 5.12 0 -5.36315e-06
+            rotation 0 -0.9999999999999999 0 1.5707953071795862
             children [
               Shape {
                 appearance Appearance {
                   material Material {
+                    transparency 0.7
                   }
                 }
-                geometry Box {
-                  size 1 0.01 0.01
+                geometry Cone {
+                  bottomRadius 5.7
+                  height 10
                 }
               }
             ]
+            boundingObject Shape {
+              appearance Appearance {
+                material Material {
+                  transparency 0.7
+                }
+              }
+            }
           }
         }
       ]
