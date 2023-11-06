@@ -1,23 +1,13 @@
 HIERARCHY
-ROOT Neck
+ROOT Head
 {
 	OFFSET 0.00000 0.00000 0.00000
 	CHANNELS 6 Xposition Yposition Zposition Zrotation Yrotation Xrotation 
-	JOINT Neck1
+	End Site
 	{
-		OFFSET -0.12403 1.43168 0.27585
-		CHANNELS 3 Zrotation Yrotation Xrotation
-		End Site
-		{
-			OFFSET 0.00000 -0.00000 0.000
-		}
+		OFFSET 0.07217 1.51590 -0.14537
 	}
 }
 MOTION
-Frames: 5
-Frame Time: .0033
-0 0 0 0.0 0 0 0 0 0
-0 0 0 0.1 0 0 0 0 0
-0 0 0 0.2 0 0 0 0 0
-0 0 0 0.1 0 0 0 0 0
-0 0 0 0.0 0 0 0 0 0
+Frames: 200
+Frame Time: .0083333
