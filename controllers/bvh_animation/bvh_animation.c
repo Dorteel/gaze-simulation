@@ -183,6 +183,11 @@ int main(int argc, char **argv) {
       // Get joint rotation for each joint.
       // Note that we need to pass the joint index according to BVH file.
       const double *orientation = wbu_bvh_get_joint_rotation(bvh_motion, index_skin_to_bvh[i]);
+    // printf("Orientation array elements:\n");
+    // for (int i = 0; i < 4; i++) {
+    //    printf("orientation[%d] = %lf\n", i, orientation[i]);
+    //}
+
       wb_skin_set_bone_orientation(skin, i, orientation, false);
     }
 

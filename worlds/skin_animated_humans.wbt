@@ -15,8 +15,8 @@ WorldInfo {
   title "Human Skin Animation"
 }
 Viewpoint {
-  orientation -0.038115762115810324 0.00037463943362000884 -0.9992732600863619 3.161235715140803
-  position -2.344299225042484 -3.0061212266561195 2.0372468142162004
+  orientation 0.31987462652255844 -0.08674955671803708 -0.9434801204669221 3.6425849874442506
+  position -1.0017698794857153 -3.3247185548407145 2.896134079021302
 }
 TexturedBackground {
   texture "noon_cloudy_countryside"
@@ -32,8 +32,46 @@ Floor {
   }
 }
 DEF ROBERT Robot {
-  translation -3 -3 0
+  translation -1.59 -3 0
   children [
+    Robot {
+      translation -0.06 0 2.12
+      children [
+        Hinge2Joint {
+          jointParameters HingeJointParameters {
+            axis 0 1 0
+          }
+          jointParameters2 JointParameters {
+          }
+          device [
+            RotationalMotor {
+              name "pitch_gaze"
+            }
+          ]
+          device2 [
+            RotationalMotor {
+              name "yaw_gaze"
+            }
+          ]
+          endPoint Solid {
+            translation -0.14 0 0
+            rotation 0 1 0 0
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                  }
+                }
+                geometry Box {
+                  size 1 0.01 0.01
+                }
+              }
+            ]
+          }
+        }
+      ]
+      controller "gaze_controller"
+    }
     CharacterSkin {
       name "Robert"
       model "Robert"

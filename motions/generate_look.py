@@ -4,7 +4,7 @@ import shutil
 N_FRAMES = 50
 STILL_FRAMES = 10000
 
-YAW_ANGLE = 20
+YAW_ANGLE = 0
 PITCH_ANGLE = 30
 N_DOF = 6
 
