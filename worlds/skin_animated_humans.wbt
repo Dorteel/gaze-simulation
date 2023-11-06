@@ -1,0 +1,52 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/humans/skin_animated_humans/protos/CharacterSkin.proto"
+
+WorldInfo {
+  info [
+    "Skin animation of human models."
+    "In this example BVH motions are played on FBX MakeHuman models."
+    "Author: Guillaume Michel <guillaume.michel.202@gmail.com>"
+  ]
+  title "Human Skin Animation"
+}
+Viewpoint {
+  orientation -0.09795829761347259 0.013787353171528826 -0.9950950109518155 3.4198959651029277
+  position -2.1760598473152326 -3.085550613082623 2.0984450954808778
+}
+TexturedBackground {
+  texture "noon_cloudy_countryside"
+}
+TexturedBackgroundLight {
+  texture "noon_cloudy_countryside"
+}
+Floor {
+  size 50 50
+  tileSize 2 2
+  appearance Grass {
+    type "mossy"
+  }
+}
+DEF ROBERT Robot {
+  translation -3 -3 0
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert"
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
